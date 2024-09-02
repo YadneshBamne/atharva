@@ -1,113 +1,202 @@
+'use client';
+import React from "react";
 import Image from "next/image";
+import Lottie from "lottie-react";
+import Animation from "./Animation - 1723199716467.json";
+import Typewriter from "typewriter-effect";
+import Link from "next/link";
+import Head from "next/head";
 
-export default function Home() {
+const page = () => {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">app/page.js</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <main>
+      <Head>
+      <link rel="preconnect" href="https://fonts.googleapis.com"></link>
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin></link>
+      <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet"></link>
+Outfit
+      </Head>
+      <div className="min-h-screen bg-purple-200 text-black">
+        <div
+          className="p-5 flex grid-cols-2 justify-center"
+        ></div>
+        <div className="flex justify-center items-center w-full h-52 my-12">
+          <Lottie className="size-96" loop={true} animationData={Animation} />{" "}
+          {/* for Lottle animation file and lottie functions*/}
         </div>
-      </div>
 
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-full sm:before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full sm:after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
+        <div className="flex justify-center w-full my-6 text-5xl">
+          <h1>
+            <span className="text-blue-500">Your</span> Home{" "}
+            <span className="text-blue-500">Away</span> From
+          </h1>
+          <div className="w-[10px] h-[50px]"></div>
+          <span className="text-blue-500">
+            <Typewriter
+              options={{
+                strings: ["Home....", "Mom....", "Dad....", "Yourself...."],
+                autoStart: true,
+                loop: true,
+              }}
+            />
+          </span>
+        </div>
 
-      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
+        <div className="flex justify-center">
+          <div className="flex gap-5 bg-slate-300 w-1/2 justify-center rounded-lg h-10 items-center">
+            <button>
+              <div>PG</div>
+            </button>
+            <button>
+              <div>Hostel</div>
+            </button>
+            <button>
+              <div>Rent a Home</div>
+            </button>
+          </div>
+        </div>
 
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800 hover:dark:bg-opacity-30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
+        <div className=" flex justify-center align-center gap-5 mb-7 mt-10">
+            <div class="min-w-sm h-48 bg-white border border-gray-200 rounded-lg shadow dark:bg-yellow-50 text-black dark:border-gray-700 ">
+              <div class="p-8">
+                <a href="#">
+                  <h5 class="mb-2 text-2xl font-bold tracking-tight text-black dark: flex justify-center items-center mb-7">
+                    Thane
+                  </h5>
+                </a>
 
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore starter templates for Next.js.
-          </p>
-        </a>
+                <Link href={"/Thane"}>
+                  <button
+                    href="#"
+                    class=" bg-yellow-50 text-black hover:bg-gray-900-800 focus:ring-4 focus:outline-none focus:ring-gray-900-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:bg-gray-900-600 dark:hover:bg-gray-900-700 dark:focus:ring-gray-900-800  
+              hover:before:bg-blue-500 border-blue-500 relative h-[32px] w-40 overflow-hidden border border-blue-600 px-3 -500 shadow-2xl transition-all before:absolute before:bottom-0 before:left-0 before:top-0 before:z-0 before:h-full before:w-0 before:bg-blue-500 before:transition-all before:duration-500 hover:shadow-blue-500 hover:before:left-0 mx-4 hover: justify-center align-center items-center"
+                  >
+                    Explore more
+                  </button>
+                </Link>
+              </div>
+            </div>
 
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50 text-balance`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
+            <div class="max-w-sm h-48 bg-white border border-gray-200 rounded-lg shadow dark:bg-yellow-50 text-black dark:border-gray-700 ">
+              <div class="p-8">
+                <a href="#">
+                  <h5 class="mb-2 text-2xl font-bold tracking-tight text-black dark: flex justify-center items-center mb-7">
+                    Vasai
+                  </h5>
+                </a>
+
+                <Link href={"/Vasai"}>
+                  <button
+                    href="#"
+                    class=" bg-yellow-50 text-black hover:bg-gray-900-800 focus:ring-4 focus:outline-none focus:ring-gray-900-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:bg-gray-900-600 dark:hover:bg-gray-900-700 dark:focus:ring-gray-900-800  
+              hover:before:bg-blue-500 border-blue-500 relative h-[32px] w-40 overflow-hidden border border-blue-600 px-3 -500 shadow-2xl transition-all before:absolute before:bottom-0 before:left-0 before:top-0 before:z-0 before:h-full before:w-0 before:bg-blue-500 before:transition-all before:duration-500 hover:shadow-blue-500 hover:before:left-0 mx-4 hover: justify-center align-center items-center"
+                  >
+                    Explore more
+                  </button>
+                </Link>
+              </div>
+            </div>
+
+            <div class="max-w-sm h-48 bg-white border border-gray-200 rounded-lg shadow dark:bg-yellow-50 text-black dark:border-gray-700 ">
+              <div class="p-8">
+                <a href="#">
+                  <h5 class="mb-2 text-2xl font-bold tracking-tight text-black dark: flex justify-center items-center mb-7">
+                    Santacruz
+                  </h5>
+                </a>
+
+                <Link href={"/Santacruz"}>
+                  <button
+                    href="#"
+                    class=" bg-yellow-50 text-black hover:bg-gray-900-800 focus:ring-4 focus:outline-none focus:ring-gray-900-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:bg-gray-900-600 dark:hover:bg-gray-900-700 dark:focus:ring-gray-900-800  
+              hover:before:bg-blue-500 border-blue-500 relative h-[32px] w-40 overflow-hidden border border-blue-600 px-3 -500 shadow-2xl transition-all before:absolute before:bottom-0 before:left-0 before:top-0 before:z-0 before:h-full before:w-0 before:bg-blue-500 before:transition-all before:duration-500 hover:shadow-blue-500 hover:before:left-0 mx-4 hover: justify-center align-center items-center"
+                  >
+                    Explore more
+                  </button>
+                </Link>
+              </div>
+            </div>
+
+            <div class="max-w-sm h-48 bg-white border border-gray-200 rounded-lg shadow dark:bg-yellow-50 text-black dark:border-gray-700 ">
+              <div class="p-8">
+                <a href="#">
+                  <h5 class="mb-2 text-2xl font-bold tracking-tight text-black dark: flex justify-center items-center mb-7">
+                    Kalyan
+                  </h5>
+                </a>
+
+                <Link href={"/Kalyan"}>
+                  <button
+                    href="#"
+                    class=" bg-yellow-50 text-black hover:bg-gray-900-800 focus:ring-4 focus:outline-none focus:ring-gray-900-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:bg-gray-900-600 dark:hover:bg-gray-900-700 dark:focus:ring-gray-900-800  
+              hover:before:bg-blue-500 border-blue-500 relative h-[32px] w-40 overflow-hidden border border-blue-600 px-3 -500 shadow-2xl transition-all before:absolute before:bottom-0 before:left-0 before:top-0 before:z-0 before:h-full before:w-0 before:bg-blue-500 before:transition-all before:duration-500 hover:shadow-blue-500 hover:before:left-0 mx-4 hover: justify-center align-center items-center"
+                  >
+                    Explore more
+                  </button>
+                </Link>
+              </div>
+            </div>
+
+            <div class="max-w-sm h-48 bg-white border border-gray-200 rounded-lg shadow dark:bg-yellow-50 text-black dark:border-gray-700 ">
+              <div class="p-8">
+                <a href="#">
+                  <h5 class="mb-2 text-2xl font-bold tracking-tight text-black dark: flex justify-center items-center mb-7">
+                    Malad
+                  </h5>
+                </a>
+
+                <Link href={"/Malad"}>
+                  <button
+                    href="#"
+                    class=" bg-yellow-50 text-black hover:bg-gray-900-800 focus:ring-4 focus:outline-none focus:ring-gray-900-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:bg-gray-900-600 dark:hover:bg-gray-900-700 dark:focus:ring-gray-900-800  
+              hover:before:bg-blue-500 border-blue-500 relative h-[32px] w-40 overflow-hidden border border-blue-600 px-3 -500 shadow-2xl transition-all before:absolute before:bottom-0 before:left-0 before:top-0 before:z-0 before:h-full before:w-0 before:bg-blue-500 before:transition-all before:duration-500 hover:shadow-blue-500 hover:before:left-0 mx-4 hover: justify-center align-center items-center"
+                  >
+                    Explore more
+                  </button>
+                </Link>
+              </div>
+            </div>
+          </div>
+
+        <div className="flex justify-center space-x-10 items-center mt-10">
+          <hr className="w-1/4 " />
+          <div className="text-2xl">Why Use Holmes</div>
+          <hr className="w-1/4 opacity-7 flex items-center" />
+        </div>
+        <div className="flex justify-around mt-10 ml-10">
+          <div>
+            <Image
+              src={"/hand-shake.png"}
+              width={80}
+              height={80}
+              className="mb-5"
+            />
+            <h1>Trusted PG's</h1>
+          </div>
+
+          <div>
+            <Image
+              src={"/add-friend.png"}
+              width={80}
+              height={80}
+              className="mb-5 ml-4"
+            />
+            <h1>Verified Owners</h1>
+          </div>
+
+          <div>
+            <Image
+              src={"/bank.png"}
+              width={80}
+              height={80}
+              className="mb-5 ml-9"
+            />
+            <h1>Authorized By Colleges</h1>
+          </div>
+        </div>
       </div>
     </main>
   );
-}
+};
+
+export default page;

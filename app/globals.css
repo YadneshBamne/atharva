@@ -18,6 +18,7 @@
 
 body {
   color: rgb(var(--foreground-rgb));
+  font-family: "Outfit", sans-serif;
   background: linear-gradient(
       to bottom,
       transparent,
@@ -30,4 +31,8 @@ body {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+input {
+  @apply w-[400px] rounded-full border-gray-200 py-2 px-6 bg-zinc-100/40;
 }
